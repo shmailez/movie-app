@@ -1,7 +1,7 @@
 @import "tailwindcss";
 /* @variant dark (&:where(.dark, .dark *)); */
 
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -13,4 +13,14 @@ body {
   body {
     @apply bg-gray-900 text-white;
   }
-} */
+}
+
+@layer utilities {
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+      .no-scrollbar {
+          -ms-overflow-style: none;  
+          scrollbar-width: none;  
+    }
+  }
