@@ -35,7 +35,7 @@ export function MovieCard({ movie }: { movie: any }) {
           }}
           className="w-full h-64 object-cover mb-2 rounded"
         />
-        <h3 className="font-bold text-lg flex justify-between items-center">
+        <h3 className="font-bold text-lg flex justify-between items-center mt-2">
           {movie.Title}
           <button
             onClick={(e) => {
@@ -60,7 +60,7 @@ export function MovieCard({ movie }: { movie: any }) {
           >
             ×
           </button>
-          <h3 className="text-lg font-bold mb-1">{details.Title} ({details.Year})</h3>
+          <h3 className="text-lg font-bold mb-1 mt-5">{details.Title} ({details.Year})</h3>
           <p className="text-sm italic mb-2">{details.Genre} — {details.Runtime}</p>
           <p className="text-sm mb-2">IMDb: {details.imdbRating}</p>
           <p className="text-sm">{details.Plot}</p>
