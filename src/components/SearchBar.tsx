@@ -2,8 +2,7 @@
 import { useState } from 'react';
 
 export function SearchBar({ onSearch }: { onSearch: (q: string) => void }) {
-  const [query, setQuery] = useState('');
-  const [active, setActive] = useState(false)
+  const [query, setQuery] = useState('')
 
   return (
     <div className="flex gap-2 mb-4">

@@ -4,7 +4,7 @@ https://movie-app-theta-sandy.vercel.app/
 Запустить приложение локально по адресу localhost:3000:
 Командной npm run dev в терминале, из репозитрия с приложением 
 
-Скачать приложение: 
+Скачать архив с приложением: 
 https://github.com/shmailez/movie-app/archive/refs/heads/main.zip
 
 

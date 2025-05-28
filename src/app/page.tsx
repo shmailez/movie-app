@@ -6,6 +6,7 @@ import { Spinner } from '@/components/Spinner';
 import { EmptyState } from '@/components/EmptyState';
 import { searchMovies } from '@/services/omdb';
 import { useState } from 'react';
+import { ErrorMessage } from '@/components/ErrorMessage';
 
 export default function Home() {
   const [query, setQuery] = useState('Batman');
@@ -32,7 +33,7 @@ export default function Home() {
   return (
     <main className="p-4 max-w-5xl mx-auto">
       <SearchBar onSearch={handleSearch} />
-      {isLoading ? <Spinner /> : empty ? <EmptyState /> : <MovieGrid movies={movies} />}
+      {isLoading ? <Spinner /> : isError ? <ErrorMessage/> : empty ? <EmptyState /> : <MovieGrid movies={movies} />}
 
       {!isLoading && !empty && totalPages > 1 && (
         <div className="flex justify-center gap-2 mt-4">
