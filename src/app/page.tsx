@@ -1,10 +1,8 @@
 'use client';
-import { useQuery } from '@tanstack/react-query';
 import { SearchBar } from '@/components/SearchBar';
 import { MovieGrid } from '@/components/MovieGrid';
 import { Spinner } from '@/components/Spinner';
 import { EmptyState } from '@/components/EmptyState';
-import { searchMovies } from '@/services/omdb';
 import { useState } from 'react';
 import { ErrorMessage } from '@/components/ErrorMessage';
 import { useMovies } from '@/hooks/useQuery';

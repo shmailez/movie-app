@@ -7,6 +7,6 @@ export function useMovies(query: string, page: number) {
     queryFn: () => searchMovies(query, page),
     placeholderData: (prev) => prev,
     staleTime: 1000 * 60 * 5,
-    // enabled: !!query,
+    enabled: !!query
   });
 }
