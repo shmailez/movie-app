@@ -7,17 +7,12 @@ import { EmptyState } from '@/components/EmptyState';
 import { searchMovies } from '@/services/omdb';
 import { useState } from 'react';
 import { ErrorMessage } from '@/components/ErrorMessage';
+import { useMovies } from '@/hooks/useQuery';
 
 export default function Home() {
   const [query, setQuery] = useState('Batman');
   const [page, setPage] = useState(1);
-
-  const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: ['movies', query, page],
-    queryFn: () => searchMovies(query, page),
-    placeholderData: previousData => previousData, // сохраняет предыдущие данные при смене страницы
-    staleTime: 1000 * 60 * 5, // кэш актуален 5 минут
-  });
+  const { data, isLoading, isError, refetch } = useMovies(query, page)
 
   const handleSearch = (newQuery: string) => {
     setQuery(newQuery);
